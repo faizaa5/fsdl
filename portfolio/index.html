@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Your Name | Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header>
+    <nav id="navbar">
+        <div class="logo">YourName</div>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="hero">
+        <h1>Hello, I'm <span>Your Name</span></h1>
+        <p>I am a <span id="typing"></span></p>
+        <a href="#projects" class="btn">View My Work</a>
+    </div>
+</header>
+
+<section id="about" class="section reveal">
+    <h2>About Me</h2>
+    <p>
+        I am a passionate developer focused on building clean, user-friendly, and visually engaging web experiences.
+    </p>
+</section>
+
+<section id="projects" class="section reveal">
+    <h2>Projects</h2>
+    <div class="project-grid">
+
+        <div class="project-card">
+            <h3>Project One</h3>
+            <p>Responsive web app built using HTML, CSS, and modern UI principles.</p>
+            <a href="#">View Project</a>
+        </div>
+
+        <div class="project-card">
+            <h3>Project Two</h3>
+            <p>Creative landing page with animations and sleek layout design.</p>
+            <a href="#">View Project</a>
+        </div>
+
+        <div class="project-card">
+            <h3>Project Three</h3>
+            <p>Portfolio website with modern UX and responsive structure.</p>
+            <a href="#">View Project</a>
+        </div>
+
+    </div>
+</section>
+
+<section id="skills" class="section reveal">
+    <h2>Skills</h2>
+    <div class="skills-grid">
+        <div>HTML5</div>
+        <div>CSS3</div>
+        <div>JavaScript</div>
+        <div>Responsive Design</div>
+        <div>UI/UX</div>
+        <div>Git</div>
+    </div>
+</section>
+
+<section id="contact" class="section contact reveal">
+    <h2>Contact Me</h2>
+
+    <form id="contactForm">
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea placeholder="Your Message" required></textarea>
+        <button type="submit" class="btn">Send Message</button>
+    </form>
+
+</section>
+
+<button id="scrollTopBtn">↑</button>
+
+<footer>
+    <p>© 2026 Your Name | All Rights Reserved</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
