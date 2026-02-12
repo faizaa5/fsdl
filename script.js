@@ -1,13 +1,13 @@
 // Typing Effect
 const typingElement = document.getElementById("typing");
-
-const words = ["Web Developer", "Creative Designer", "Problem Solver"];
+const words = ["Web Developer", "Problem Solver", "Creative Thinker"];
 let wordIndex = 0;
 let charIndex = 0;
 let isDeleting = false;
 
 function typeEffect() {
     const currentWord = words[wordIndex];
+
     if (isDeleting) {
         typingElement.textContent = currentWord.substring(0, charIndex--);
     } else {
@@ -31,28 +31,16 @@ function typeEffect() {
 typeEffect();
 
 
-// Navbar Background Change on Scroll
-const navbar = document.getElementById("navbar");
-
-window.addEventListener("scroll", () => {
-    if (window.scrollY > 50) {
-        navbar.classList.add("scrolled");
-    } else {
-        navbar.classList.remove("scrolled");
-    }
-});
-
-
-// Scroll Reveal Animation
+// Scroll Reveal
 const reveals = document.querySelectorAll(".reveal");
 
 function revealOnScroll() {
     const windowHeight = window.innerHeight;
 
-    reveals.forEach((element) => {
-        const elementTop = element.getBoundingClientRect().top;
+    reveals.forEach(el => {
+        const elementTop = el.getBoundingClientRect().top;
         if (elementTop < windowHeight - 100) {
-            element.classList.add("active");
+            el.classList.add("active");
         }
     });
 }
@@ -60,15 +48,11 @@ function revealOnScroll() {
 window.addEventListener("scroll", revealOnScroll);
 
 
-// Scroll to Top Button
+// Scroll to Top
 const scrollBtn = document.getElementById("scrollTopBtn");
 
 window.addEventListener("scroll", () => {
-    if (window.scrollY > 300) {
-        scrollBtn.style.display = "block";
-    } else {
-        scrollBtn.style.display = "none";
-    }
+    scrollBtn.style.display = window.scrollY > 300 ? "block" : "none";
 });
 
 scrollBtn.addEventListener("click", () => {
@@ -79,8 +63,8 @@ scrollBtn.addEventListener("click", () => {
 });
 
 
-// Contact Form Submission
-document.getElementById("contactForm").addEventListener("submit", function(e) {
+// Contact Form
+document.getElementById("contactForm").addEventListener("submit", function(e){
     e.preventDefault();
     alert("Thank you! Your message has been sent.");
     this.reset();
